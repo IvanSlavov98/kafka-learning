@@ -1,4 +1,10 @@
 package org.example.orderprocessor.model;
 
-public record OrderCancelledEvent() {
+import java.time.Instant;
+
+public record OrderCancelledEvent(
+        String orderId,
+        String reason,
+        Instant cancelledAt
+) {
 }
